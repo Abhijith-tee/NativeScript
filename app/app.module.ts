@@ -5,6 +5,9 @@ import { AppComponent } from "./app.component";
 import { HttpClientModule } from '@angular/common/http';
 import { NativeScriptHttpModule } from "nativescript-angular/http";
 import { HomeComponent } from './home/home.component';
+import { AboutComponent } from './about/about.component';
+import { ContactComponent } from './contact/contact.component';
+import { TNSFontIconModule } from 'nativescript-ngx-fonticon';
 
 import { DrawerComponent } from "./shared/drawer/drawer.component";
 import { MenuComponent } from './menu/menu.component';
@@ -27,14 +30,18 @@ import { baseURL } from './shared/baseurl';
         AppRoutingModule,
         NativeScriptHttpModule,
         HttpClientModule,
-        NativeScriptUISideDrawerModule
+        NativeScriptUISideDrawerModule,
+        TNSFontIconModule.forRoot({
+            'fa': './fonts/font-awesome.min.css'})
     ],
     declarations: [
         AppComponent,
         MenuComponent,
         DishdetailComponent,
         DrawerComponent,
-        HomeComponent
+        HomeComponent,
+        AboutComponent,
+        ContactComponent
     ],
     providers: [
         {provide: 'baseURL', useValue: baseURL},
