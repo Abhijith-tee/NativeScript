@@ -19,6 +19,9 @@ import { PromotionService } from './services/promotion.service';
 import { LeaderService } from './services/leader.service';
 import { FavoriteService } from './services/favorite.service';
 import { FavoritesComponent } from './favorites/favorites.component';
+import { NativeScriptFormsModule } from "nativescript-angular/forms";
+import { ReactiveFormsModule } from '@angular/forms';
+import { ReservationComponent } from './reservation/reservation.component';
 
 
 import { baseURL } from './shared/baseurl';
@@ -34,6 +37,8 @@ import { baseURL } from './shared/baseurl';
         HttpClientModule,
         NativeScriptUIListViewModule,
         NativeScriptUISideDrawerModule,
+        NativeScriptFormsModule,
+        ReactiveFormsModule,
         TNSFontIconModule.forRoot({
             'fa': './fonts/font-awesome.min.css'})
     ],
@@ -45,7 +50,8 @@ import { baseURL } from './shared/baseurl';
         HomeComponent,
         AboutComponent,
         ContactComponent,
-        FavoritesComponent
+        FavoritesComponent,
+        ReservationComponent
     ],
     providers: [
         {provide: 'baseURL', useValue: baseURL},
