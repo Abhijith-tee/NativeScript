@@ -24,6 +24,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { ReservationComponent } from './reservation/reservation.component';
 import { ReservationModalComponent } from "./reservationmodal/reservationmodal.component";
 import { CommentComponent } from './comment/comment.component';
+import { CouchbaseService } from './services/couchbase.service';
 
 
 import { baseURL } from './shared/baseurl';
@@ -64,7 +65,8 @@ import { baseURL } from './shared/baseurl';
         PromotionService,
         LeaderService,
         ProcessHTTPMsgService,
-        FavoriteService
+        FavoriteService,
+        CouchbaseService
     ],
     schemas: [
         NO_ERRORS_SCHEMA
