@@ -7,6 +7,7 @@ import { TNSFontIconService } from 'nativescript-ngx-fonticon';
 import { ActivatedRoute, Params } from '@angular/router';
 import { RouterExtensions } from 'nativescript-angular/router';
 import { switchMap } from 'rxjs/operators';
+import { Toasty } from 'nativescript-toasty';
 
 @Component({
   selector: 'app-dishdetail',
