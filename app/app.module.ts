@@ -22,6 +22,7 @@ import { FavoritesComponent } from './favorites/favorites.component';
 import { NativeScriptFormsModule } from "nativescript-angular/forms";
 import { ReactiveFormsModule } from '@angular/forms';
 import { ReservationComponent } from './reservation/reservation.component';
+import { ReservationModalComponent } from "./reservationmodal/reservationmodal.component";
 
 
 import { baseURL } from './shared/baseurl';
@@ -51,8 +52,10 @@ import { baseURL } from './shared/baseurl';
         AboutComponent,
         ContactComponent,
         FavoritesComponent,
-        ReservationComponent
+        ReservationComponent,
+        ReservationModalComponent
     ],
+    entryComponents: [ReservationModalComponent],
     providers: [
         {provide: 'baseURL', useValue: baseURL},
         DishService,
