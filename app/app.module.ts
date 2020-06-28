@@ -26,6 +26,7 @@ import { ReservationModalComponent } from "./reservationmodal/reservationmodal.c
 import { CommentComponent } from './comment/comment.component';
 import { CouchbaseService } from './services/couchbase.service';
 import { UserAuthComponent } from "./userauth/userauth.component";
+import { PlatformService } from './services/platform.service';
 
 
 import { baseURL } from './shared/baseurl';
@@ -68,7 +69,8 @@ import { baseURL } from './shared/baseurl';
         LeaderService,
         ProcessHTTPMsgService,
         FavoriteService,
-        CouchbaseService
+        CouchbaseService,
+        PlatformService
     ],
     schemas: [
         NO_ERRORS_SCHEMA
