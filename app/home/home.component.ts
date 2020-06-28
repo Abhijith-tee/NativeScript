@@ -10,6 +10,9 @@ import { Page } from "ui/page";
 import { View } from "ui/core/view";
 import { SwipeGestureEventData, SwipeDirection } from "ui/gestures";
 import * as enums from "ui/enums";
+import * as app from "application";
+import { RadSideDrawer } from "nativescript-ui-sidedrawer";
+
 
 @Component({
   selector: 'app-home',
@@ -50,6 +53,11 @@ export class HomeComponent implements OnInit {
       .subscribe(leader => this.leader = leader,
         errmess => this.leaderErrMess = <any>errmess);
   }
+
+  onDrawerButtonTap(): void {
+    const sideDrawer = <RadSideDrawer>app.getRootView();
+    sideDrawer.showDrawer();
+}
 
   onSwipe(args: SwipeGestureEventData) {
 
